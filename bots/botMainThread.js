@@ -5,7 +5,7 @@ var cluster = require("cluster");
 async function botsMainThread() {
   let allBots = await getAllBotsFunc().catch((x) => console.log(x));
   if (!allBots) return;
-  const numWorkers = Math.min(allBots.length, 5);
+  const numWorkers = Math.min(allBots.length, 10);
   console.log(`[BOT MASTER] Spinning up ${numWorkers} threads`);
 
   for (let i = 0; i < numWorkers; i++) {
