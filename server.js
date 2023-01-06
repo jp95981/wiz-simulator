@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const { createServer } = require("http");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3069;
 const server = createServer();
 const { Worker } = require("worker_threads");
 const botWorkerFilePath = "./bots/botMainThread.js";
